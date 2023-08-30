@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('assets/gilroy-light-webfont.woff2') format(woff2),
+         url('assets/gilroy-light-webfont.woff') format(woff);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    color: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+img, video{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.ph {
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    height:450px;
+    width: 320px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: none;
+    transition: all 0.5s ease;
+}
+
+.ph span{
+    font-size: 50px;
+    color: #fff;
+    transform: translate(0, -220%);
+    animation: none;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.ph:hover{
+    box-shadow: 1px 1px 10px rgb(51, 51, 51);
+}
+
+.ph img {
+    height: 45%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.ph h1{
+    font-weight: 800;
+    color: black;
+    font-size: 2vh;
+}
+
+.ph h5{
+    font-size: 12px;
+    font-weight: 300;
+    width: 100%;
+    overflow: hidden;
+}
+
+.btncont{
+    margin-top: 5%;
+    justify-content: center;
+    display: flex;
+    width: 60%;
+    height: 20%;
+    gap: 10%;
+    flex-direction: column;
+   
+}
+
+.btncont button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    height: 20rem;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+
+.btncont #like{
+    background-color: beige;
+    cursor: pointer;
+}
+
+.btncont #skip{
+    background-color: cadetblue;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+
+@keyframes hart{
+ 0% {
+    transform: translate(0, -100%) scale(0);
+    opacity: 0%;
+ }
+ 50%{
+    transform: translate(0, -210%) scale(1);
+    opacity: 100%;
+ }
+
+ 100%{
+    transform: translate(0, -300%) scale(0);
+    opacity: 0%;
+ }
+
+}
+
+@keyframes hart1{
+    0% {
+       transform: translate(0, -220%) scale(1);
+       opacity: 100%;
+    }
+    100%{
+       transform: translate(0, -100%) scale(0);
+       opacity: 0%;
+       
+    }
+   }
