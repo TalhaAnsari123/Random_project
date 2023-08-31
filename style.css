@@ -7,8 +7,9 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Bebas Neue';
     color: #000;
+    user-select: none;
 }
 
 html, body {
@@ -17,34 +18,36 @@ html, body {
     cursor: none;
 }
 
-img, video{
-    max-width: 100%;
-    height: auto;
-}
-
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: cornflowerblue;
+    background-color: black;
+    gap: 2%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
-
+::-webkit-scrollbar{
+    display: none;
+}
 .ph {
     display: flex;
-    
     align-items: center;
     flex-direction: column;
     height:450px;
     width: 320px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #DAD3CC;
     padding: 30px;
-    text-align: center;
+    text-align: left;
     box-shadow: none;
     transition: all 0.5s ease;
+    
 }
 
-.ph span{
+.ph #spm{
+    position: absolute;
     font-size: 50px;
     color: #fff;
     transform: translate(0, -220%);
@@ -54,21 +57,24 @@ body{
 }
 
 .ph:hover{
-    box-shadow: 1px 1px 10px rgb(51, 51, 51);
+    box-shadow: 1px 1px 10px rgb(221, 221, 221);
 }
 
 .ph img {
-    height: 45%;
-    width: 100%;
+    height: 55%;
+    width: 250px;
+    aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
 }
 
 .ph h1{
+    margin-top: 10px;
     font-weight: 800;
     color: black;
-    font-size: 3vh;
+    font-size: 4vh;
+    text-align: left;
 }
 
 .ph h5{
@@ -79,12 +85,10 @@ body{
 }
 
 .btncont{
-    margin-top: 5%;
     justify-content: center;
     display: flex;
     width: 60%;
     height: 20%;
-    gap: 10%;
     flex-direction: column;
    
 }
@@ -100,31 +104,25 @@ body{
 }
 
 
-.btncont #like{
-    background-color: beige;
-    
+.btncont #like span{
+    color:#fff;
+    font-size: 20px;
 }
 
-.btncont #skip{
-    background-color: cadetblue;
-    color: #fff;
-    
-
-}
 
 
 @keyframes hart{
  0% {
-    transform: translate(0, -100%) scale(0);
+    transform: translate(0, 120%) scale(0);
     opacity: 0%;
  }
  50%{
-    transform: translate(0, -210%) scale(1);
+    transform: translate(0, 50%) scale(1);
     opacity: 100%;
  }
 
  100%{
-    transform: translate(0, -300%) scale(0);
+    transform: translate(0, -100%) scale(0);
     opacity: 0%;
  }
 
@@ -140,11 +138,11 @@ body{
 
 @keyframes hart1{
     0% {
-       transform: translate(0, -220%) scale(1);
+       transform: translate(0, 50%) scale(1);
        opacity: 100%;
     }
     100%{
-       transform: translate(0, -100%) scale(0);
+       transform: translate(0, 120%) scale(0);
        opacity: 0%;
        
     }
